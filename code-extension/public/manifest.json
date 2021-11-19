@@ -1,0 +1,37 @@
+{
+  "name": "Auth Code Extension",
+  "description": "Pulls auth code from email to make your life easier.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8ETcM1rseXVqaqh5zrp7bMHMySbM0o2P3ArJ6uytxtskhaUOXVKoh2Et9K8cfMZq7l8l9VqjZ+VKTfL3fPnzaGN9BHppKY309B9tLybWwkKLGk8VtbI7LO6kZaJGGno484osjSq0QnrrWFj+H2Oj7n4PTkMf3FC2PYBZkLO56UQCL08mi61c/65C4PdDTk3nLUqWvB12KrYizuvczd3tShPJ9LnfUMGHm1K5iLJphP0hvSR+KMTXOZsz0O3NbZSXWjum6WPDjqMeLe00mvvSY5W9S5SLh5Mf1jOFxhNsGuqn2khstVy+xcVrbcwr70fSa/OPxdtCryx1to09PUN1xQIDAQAB",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "homepage_url": "https://github.com/Benaiah-Varner/Auth-Code-Extension",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Auth Code Extension",
+    "default_icon": {
+      "48": "logo48.png",
+      "96": "logo96.png"
+    }
+  },
+  "content_security_policy": "script-src 'self' chrome-extension://nfpojngenkljbemhbcecchnbgfnklkol/static/js/runtime-main.7d224a94.js https://*.google.com 'unsafe-eval'; object-src 'self' https://apis.google.com https://www.gstatic.com https://www.googleapis.com https://securetoken.googleapis.com",
+  "icons": {
+    "48": "logo48.png",
+    "96": "logo96.png"
+  },
+  "chrome_url_overrides": {},
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "oauth2": {
+    "client_id": "575159636625-00uajguakfi0jcltg1ennqfcidagsm3k.apps.googleusercontent.com",
+    "scopes": ["https://mail.google.com/"]
+  },
+  "permissions": [
+    "storage",
+    "identity",
+    "*://*.google.com/*",
+    "contextMenus",
+    "activeTab",
+    "<all_urls>"
+  ]
+}
